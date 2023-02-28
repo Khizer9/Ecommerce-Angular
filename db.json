@@ -1,0 +1,46 @@
+{
+  "seller": [
+    {
+      "name": "Khizer",
+      "email": "khizer@gmail.com",
+      "password": "khizer123",
+      "id": 1
+    },
+    {
+      "name": "Khizer ali",
+      "email": "khizerali@gmail.com",
+      "password": "khizer12345",
+      "id": 2
+    },
+    {
+      "name": "sli",
+      "email": "ali@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "name": "haider",
+      "email": "haider@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "name": "ahmed",
+      "email": "ahmed@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "name": "zehra",
+      "email": "zehra@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "name": "khizerrr",
+      "email": "khizerrr@gmail.com",
+      "password": "123456",
+      "id": 7
+    }
+  ]
+}
