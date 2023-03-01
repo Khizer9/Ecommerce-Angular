@@ -47,4 +47,5 @@
     border: 1px solid blueviolet;
     height: 39px;
     border-left: 0px;
+    cursor: pointer;
 }
