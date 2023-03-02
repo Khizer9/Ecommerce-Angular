@@ -49,3 +49,8 @@
     border-left: 0px;
     cursor: pointer;
 }
+
+h1 a{
+    color: blueviolet;
+    text-decoration: none;
+}
