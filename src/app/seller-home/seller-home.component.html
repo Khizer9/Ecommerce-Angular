@@ -1,5 +1,6 @@
 <div class="product-list">
     <h1>All Product List</h1>
+    <p class="message-p">{{productMsg}}</p>
 
     <table>
         <thead>
@@ -10,6 +11,7 @@
                 <th>Color</th>
                 <th>Category</th>
                 <th>Description</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +22,11 @@
                 <td>{{item.color}}</td>
                 <td>{{item.category}}</td>
                 <td>{{item.description}}</td>
+                <td class="adjust-update-link"><fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon>
+                    <a class="adjust" routerLink="/seller-update-product/{{item.id}}"><fa-icon  [icon]="editIcon"></fa-icon></a>
+                </td> 
+                     
             </tr>
         </tbody>
     </table>
-</div>
+</div> 

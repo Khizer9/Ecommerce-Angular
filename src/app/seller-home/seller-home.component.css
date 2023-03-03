@@ -14,3 +14,11 @@ img{
     width: 100px;
     height: 100px;
 }
+
+.adjust-update-link{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.adjust{
+    margin-left: 10px;
+}

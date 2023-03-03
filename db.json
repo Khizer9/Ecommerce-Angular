@@ -47,20 +47,11 @@
     {
       "name": "Iphone 14",
       "price": "175000",
-      "color": "Red",
+      "color": "Black",
       "category": "Mobile",
       "description": "Iphone 14 Pro",
       "image": "https://cdn.dxomark.com/wp-content/uploads/medias/post-125428/Apple-iPhone-14-Pro-Max_FINAL_featured-image-packshot-review-1.jpg",
       "id": 1
-    },
-    {
-      "name": "Samsung S22",
-      "price": "250000",
-      "color": "Black",
-      "category": "Mobile",
-      "description": "Samsung S22 ultra",
-      "image": "https://media.wired.com/photos/62030c4594a57925893abb7a/125:94/w_1650,h_1241,c_limit/Gear-Samsung-Galaxy-S22-Ultra-1.jpg",
-      "id": 2
     }
   ]
 }
