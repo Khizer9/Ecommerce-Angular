@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((val: any)=>{
       if(val.url){
         if(localStorage.getItem('seller') && val.url.includes('seller')){
-          console.log("inside seller")
+          // console.log("inside seller")
           this.menuType = "Seller"
           if(localStorage.getItem('seller')){
             let sellerStore = localStorage.getItem('seller')
@@ -45,12 +45,15 @@ export class HeaderComponent implements OnInit {
       const element = query.target as HTMLInputElement
      this.product.searchProducts(element.value).subscribe((data: any) => {
       this.searchResults = data
-      console.log(data)
      })
     }
   }
 
   hideSearch(){
     this.searchResults = undefined
+  }
+
+  submitSearch(val: string){
+    this.router.navigate([`/search/${val}`])
   }
 }
