@@ -89,5 +89,10 @@
       "image": "https://static-01.daraz.pk/p/81f82f817825f19a77e398437af83a55.jpg",
       "id": 5
     }
-  ]
+  ],
+  "users": {
+    "name": "khizer",
+    "email": "khizer@gmail.com",
+    "password": "khizer123"
+  }
 }
