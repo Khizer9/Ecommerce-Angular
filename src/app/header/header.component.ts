@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   menuType : string = 'default';
   sellerName: string = ''
   searchResults: undefined | Product[]
+  userName: string = ''
+  cartItems = 0
   constructor(public router:Router, private product: ProductService){
   }
 
@@ -20,18 +22,30 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((val: any)=>{
       if(val.url){
         if(localStorage.getItem('seller') && val.url.includes('seller')){
-          // console.log("inside seller")
           this.menuType = "Seller"
           if(localStorage.getItem('seller')){
             let sellerStore = localStorage.getItem('seller')
             let sellerData = sellerStore && JSON.parse(sellerStore)[0]
             this.sellerName = sellerData.name
           }
-        }else{
-          console.log("outside seller")
+        }else if(localStorage.getItem('user')){
+          let userStorage = localStorage.getItem('user')
+          let userData = userStorage && JSON.parse(userStorage)
+          this.userName = userData.name
+          this.menuType = "user"
+        }
+        else{
           this.menuType = "default"
         }
       }
+    })
+
+    let cartData = localStorage.getItem('localCart')
+    if(cartData){
+      this.cartItems = JSON.parse(cartData).length 
+    }
+    this.product.cartData.subscribe((items) => {
+      this.cartItems = items.length
     })
   }
 
@@ -59,5 +73,10 @@ export class HeaderComponent implements OnInit {
 
   redirectToDetails(id: number){
     this.router.navigate(['/details/'+id])
+  }
+
+  userLogout(){
+    localStorage.removeItem('user')
+    this.router.navigate(['/user-auth']) 
   }
 }
